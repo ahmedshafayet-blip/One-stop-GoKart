@@ -1,12 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="gokart.css">
-    <script src="gokart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KartParts — Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/> 
+  <link rel="stylesheet" href=""/>
 </head>
 <body>
-<p> Hej jag är ...</p>
-<div>
-
-</div>
+ 
+  <!-- ══ CATEGORY FILTER CHIPS ══ -->
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-chip active" data-filter="all">All</button>
+    <button class="filter-chip" data-filter="engine">Engine</button>
+    <button class="filter-chip" data-filter="steering">Steering</button>
+    <button class="filter-chip" data-filter="tyres">Tyres</button>>>
+    <button class="filter-chip" data-filter="brakes">Brakes</button>
+    <button class="filter-chip" data-filter="axle">Axle</button>
+    <button class="filter-chip" data-filter="bodywork">Bodywork</button>
+    <button class="filter-chip" data-filter="apparel">Apparel</button>
+    <button class="filter-chip" data-filter="electronics">Electronics</button>
+  </div>
+ 
+  <!-- ══ PRODUCTS ══ -->
+  <section class="shop-section">
+    <div class="section-label">Featured Products</div>
+    <p class="no-results hidden" id="noResults">No products match your search.</p>
+ 
+    <div class="products-grid" id="productsGrid">
+ 
+      <div class="product-card" data-name="otk tony kart steering wheel steering">
+        <div class="product-img">
+          🎯
+          <span class="product-cat-badge">Steering</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">OTK Tony Kart Steering Wheel</div>
+          <div class="product-price">$89</div>
+          <button class="add-to-cart"
+            data-id="1" data-name="OTK Tony Kart Steering Wheel"
+            data-price="89" data-cat="Steering" data-emoji="🎯">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="product-card" data-name="iame x30 engine 125cc engine">
+        <div class="product-img">
+          ⚙️
+          <span class="product-cat-badge">Engine</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">IAME X30 Engine 125cc</div>
+          <div class="product-price">$1,499</div>
+          <button class="add-to-cart"
+            data-id="2" data-name="IAME X30 Engine 125cc"
+            data-price="1499" data-cat="Engine" data-emoji="⚙️">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="product-card" data-name="mg tyres yellow compound set tyres">
+        <div class="product-img">
+          ⭕
+          <span class="product-cat-badge">Tyres</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">MG Tyres Yellow Compound Set</div>
+          <div class="product-price">$219</div>
+          <button class="add-to-cart"
+            data-id="3" data-name="MG Tyres Yellow Compound Set"
+            data-price="219" data-cat="Tyres" data-emoji="⭕">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="product-card" data-name="adjustable rear axle 50mm axle">
+        <div class="product-img">
+          🔩
+          <span class="product-cat-badge">Axle</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Adjustable Rear Axle 50mm</div>
+          <div class="product-price">$134</div>
+          <button class="add-to-cart"
+            data-id="4" data-name="Adjustable Rear Axle 50mm"
+            data-price="134" data-cat="Axle" data-emoji="🔩">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="product-card" data-name="omp racing suit red black apparel">
+        <div class="product-img">
+          🏎️
+          <span class="product-cat-badge">Apparel</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">OMP Racing Suit — Red/Black</div>
+          <div class="product-price">$279</div>
+          <button class="add-to-cart"
+            data-id="5" data-name="OMP Racing Suit — Red/Black"
+            data-price="279" data-cat="Apparel" data-emoji="🏎️">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="product-card" data-name="brake caliper kit brakes">
+        <div class="product-img">
+          🛑
+          <span class="product-cat-badge">Brakes</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Brake Caliper Kit</div>
+          <div class="product-price">$112</div>
+          <button class="add-to-cart"
+            data-id="6" data-name="Brake Caliper Kit"
+            data-price="112" data-cat="Brakes" data-emoji="🛑">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="product-card" data-name="carbon fibre front fairing bodywork">
+        <div class="product-img">
+          🪄
+          <span class="product-cat-badge">Bodywork</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Carbon Fibre Front Fairing</div>
+          <div class="product-price">$195</div>
+          <button class="add-to-cart"
+            data-id="7" data-name="Carbon Fibre Front Fairing"
+            data-price="195" data-cat="Bodywork" data-emoji="🪄">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="product-card" data-name="digital lap timer electronics">
+        <div class="product-img">
+          ⏱️
+          <span class="product-cat-badge">Electronics</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Digital Lap Timer</div>
+          <div class="product-price">$64</div>
+          <button class="add-to-cart"
+            data-id="8" data-name="Digital Lap Timer"
+            data-price="64" data-cat="Electronics" data-emoji="⏱️">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <script src=""></script>
 </body>
+</html>
