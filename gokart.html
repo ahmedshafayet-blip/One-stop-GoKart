@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>One-Stop-Gokart</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/> 
-  <link rel="stylesheet" href=""/>
+  <link rel="stylesheet" href="gokart.css"/>
 </head>
 <body>
  
-  <!-- ══ CATEGORY FILTER CHIPS ══ -->
+  <!-- produkt filter -->
   <div class="filter-bar" id="filterBar">
     <button class="filter-chip active" data-filter="all">All</button>
     <button class="filter-chip" data-filter="engine">Engine</button>
@@ -23,7 +23,7 @@
     <button class="filter-chip" data-filter="electronics">Electronics</button>
   </div>
  
-  <!-- ══ PRODUCTS ══ -->
+  <!-- produkter -->
   <section class="shop-section">
     <div class="section-label">Featured Products</div>
     <p class="no-results hidden" id="noResults">No products match your search.</p>
@@ -62,13 +62,13 @@
         </div>
       </div>
  
-      <div class="product-card" data-name="mg tyres yellow compound set tyres">
+      <div class="product-card" data-name="mg tyres medium compound set tyres">
         <div class="product-img">
           ⭕
           <span class="product-cat-badge">Tyres</span>
         </div>
         <div class="product-info">
-          <div class="product-name">MG Tyres Yellow Compound Set</div>
+          <div class="product-name">MG Tyres Medium Compound Set</div>
           <div class="product-price">$219</div>
           <button class="add-to-cart"
             data-id="3" data-name="MG Tyres Yellow Compound Set"
@@ -105,6 +105,38 @@
           <button class="add-to-cart"
             data-id="5" data-name="OMP Racing Suit — Red/Black"
             data-price="279" data-cat="Apparel" data-emoji="🏎️">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="adjustable front axle 25mm axle">
+        <div class="product-img">
+          🔩
+          <span class="product-cat-badge">Axle</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Adjustable Front Axle 25mm</div>
+          <div class="product-price">$119</div>
+          <button class="add-to-cart"
+            data-id="4" data-name="Adjustable Rear Axle 50mm"
+            data-price="134" data-cat="Axle" data-emoji="🔩">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="mg tyres hard compound set tyres">
+        <div class="product-img">
+          ⭕
+          <span class="product-cat-badge">Tyres</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">MG Tyres Hard Compound Set</div>
+          <div class="product-price">$235</div>
+          <button class="add-to-cart"
+            data-id="3" data-name="MG Tyres Yellow Compound Set"
+            data-price="219" data-cat="Tyres" data-emoji="⭕">
             <span>Add to Cart</span>
           </button>
         </div>
@@ -157,10 +189,26 @@
           </button>
         </div>
       </div>
+
+      <div class="product-card" data-name="mg tyres soft compound set tyres">
+        <div class="product-img">
+          ⭕
+          <span class="product-cat-badge">Tyres</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">MG Tyres Soft Compound Set</div>
+          <div class="product-price">$249</div>
+          <button class="add-to-cart"
+            data-id="3" data-name="MG Tyres Yellow Compound Set"
+            data-price="219" data-cat="Tyres" data-emoji="⭕">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
  
     </div>
   </section>
  
-  <script src=""></script>
+  <script src="gokart.js"></script>
 </body>
 </html>

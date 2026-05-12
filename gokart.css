@@ -1,3 +1,151 @@
-body{
-    background-color: ghostwhite;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Produkt grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 0 44px;
+}
+
+/* Produkt boxarna */
+.product-card {
+  background: #141417;
+  border: 1px solid gray;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition:
+    border-color 0.25s,
+    transform 0.25s cubic-bezier(0.34,1.2,0.64,1),
+    box-shadow 0.25s;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,165,0,0.05) 0%,
+    transparent 50%
+  );
+
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.product-card:hover {
+  border-color: orange;
+  transform: translateY(-5px) scale(1.01);
+  box-shadow:
+    0 0 0 1px rgba(255,165,0,0.2),
+    0 20px 48px rgba(0,0,0,0.4),
+    0 0 60px rgba(255,165,0,0.2);
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.product-card.hidden {
+  display: none;
+}
+
+/* area för produkt bilderna */
+.product-img {
+  background: black;
+  aspect-ratio: 16 / 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.product-card:hover .product-img::after {
+  transform: translateX(100%);
+}
+
+/* info arean */
+.product-info {
+  padding: 16px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.25;
+}
+
+.product-price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: orange;
+  margin-top: 2px;
+  letter-spacing: -0.01em;
+}
+
+/* lägg till i kart knappen */
+.add-to-cart {
+  margin-top: 12px;
+  background: black;
+  color: white;
+  border: white;
+  border-radius: 2px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 11px;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s,
+    transform 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: orange;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  z-index: 0;
+}
+
+.add-to-cart span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.25s;
 }
