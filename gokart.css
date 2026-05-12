@@ -11,6 +11,113 @@ body {
   min-height: 100vh;
 }
 
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 44px 0;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  background: #1c1c21;
+  border: 1px solid #35353e;
+  border-radius: 99px;
+  color: #b0acaa;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.filter-chip:hover {
+  border-color: #f5a623;
+  color: #f5a623;
+}
+
+.filter-chip.active {
+  background: #f5a623;
+  border-color: #f5a623;
+  color: #0a0a0c;
+}
+
+/*search bar css för att lägga den på plats och ge dens text typ */
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-wrap input {
+  background: #1c1c21;
+  border: 1px solid #35353e;
+  border-radius: 8px;
+  color: #eeeae3;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.88rem;
+  padding: 9px 40px 9px 16px;
+  width: 210px;
+  outline: none;
+  transition: border-color 0.25s, width 0.35s ease, box-shadow 0.25s;
+}
+
+.search-wrap input::placeholder { color: #636270; }
+
+.search-wrap input:focus {
+  border-color: #f5a623;
+  width: 275px;
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.12);
+}
+
+.search-icon {
+  position: absolute;
+  right: 13px;
+  color: #636270;
+  pointer-events: none;
+  display: flex;
+  transition: color 0.2s;
+}
+
+.search-wrap input:focus ~ .search-icon { color: #f5a623; }
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 44px 0;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  background: #1c1c21;
+  border: 1px solid #2c2c32;
+  border-radius: 99px;
+  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.filter-chip:hover {
+  border-color: #f5a623;
+  color: #f5a623;
+}
+
+.filter-chip.active {
+  background: #f5a623;
+  border-color: #f5a623;
+  color: #0a0a0c;
+}
+
 /* Produkt grid */
 .products-grid {
   display: grid;
