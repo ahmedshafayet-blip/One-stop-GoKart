@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KartParts — Cart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../CSS/cart.css"/>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav>
+    <a href="gokart.html" class="nav-logo">Kart<span>Parts</span></a>
+  </nav>
+
+  <main>
+    <h1 class="page-title">Your Cart 
+        <span id="itemCount">0</span>
+    </h1>
+
+    <div class="cart-layout">
+
+      <div class="cart-left">
+
+        <div class="empty-state" id="emptyState">
+          <p class="empty-emoji">🏁</p>
+          <p>Your cart is empty!</p>
+          <a href="gokart.html" class="shop-link">Go to Shop</a>
+        </div>
+
+        <div class="item-list" id="itemList"> </div>
+
+        <!-- Checkout knapp -->
+        <button class="checkout-btn" id="checkoutBtn">Check Out</button>
+
+        <!-- clear cart knappen  -->
+        <button class="clear-btn" id="clearBtn">Clear Cart</button>
+
+      </div>
+
+      <!-- pris  uppdelnings del -->
+      <div class="cart-right" id="cartSummary">
+
+        <h2 class="summary-title">Price Breakdown</h2>
+
+        <div class="summary-rows">
+
+          <div class="summary-row">
+            <span class="summary-label">Subtotal</span>
+            <span class="summary-value" id="subtotalVal">$0</span>
+          </div>
+
+          <div class="summary-row">
+            <span class="summary-label">Shipping</span>
+            <span class="summary-value" id="shippingVal">$0</span>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row total-row">
+            <span class="summary-label">Total</span>
+            <span class="summary-value" id="totalVal">$0</span>
+          </div>
+
+        </div>
+
+        <p class="free-shipping-note" id="freeShippingNote">
+          🎉 Free shipping on orders over $1000!
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="../Java script/cart.js"></script>
+</body>
+</html>
