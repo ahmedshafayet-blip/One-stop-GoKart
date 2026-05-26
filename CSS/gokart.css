@@ -101,12 +101,6 @@ nav::after {
 
 .search-wrap input:focus ~ .search-icon { color: orange; }
 
-.product-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* kart knappen */
 .cart-btn {
   position: relative;
@@ -497,6 +491,12 @@ nav::after {
   transition: background 0.3s;
 }
 
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .product-card:hover .product-img::after {
   transform: translateX(100%);
 }
@@ -580,7 +580,7 @@ nav::after {
   transition: color 0.25s;
 }
 
-/* allt under kan väljas att ta bort */
+/* Sidoleds hover på add knappen */
 .product-card:hover .add-to-cart::before { transform: scaleX(1); }
 .product-card:hover .add-to-cart span { color: #0a0a0c; }
 
