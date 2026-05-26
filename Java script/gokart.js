@@ -132,7 +132,15 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleMenu();
   });
 
-  document.getElementById('menuBackdrop').addEventListener('click', closeMenu);
+  document.addEventListener('click', function(event) {
+    const overlay = document.getElementById('menuOverlay');
+    const panel   = overlay.querySelector('.menu-panel');
+    const burger  = document.getElementById('burgerBtn');
+
+    if (!panel.contains(event.target) && !burger.contains(event.target)) {
+      closeMenu();
+    }
+  });
 
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') closeMenu();

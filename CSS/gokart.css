@@ -173,7 +173,6 @@ nav::after {
 }
 
 .burger-btn:hover span { background: #f5a623; }
-.burger-btn:hover span:nth-child(2) { width: 14px; }
 
 /* pop up menyn på högra hörn */
 .menu-overlay {
@@ -185,22 +184,11 @@ nav::after {
 
 .menu-overlay.open { pointer-events: all; }
 
-.menu-backdrop {
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  transition: background 0.3s;
-}
-
-.menu-overlay.open .menu-backdrop {
-  background: rgba(0,0,0,0.55);
-}
-
 .menu-panel {
   position: absolute;
   top: calc(70px + 10px);
   right: 28px;
-  width: 270px;
+  width: 220px;
   background: #141417;
   border: 1px solid #35353e;
   border-radius: 16px;
@@ -230,39 +218,21 @@ nav::after {
   margin-bottom: 14px;
 }
 
-.menu-placeholder {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.menu-placeholder-item {
+.menu-link {
+  display: block;
   background: #1c1c21;
-  border: 1px dashed #35353e;
+  border: 1px solid #35353e;
   border-radius: 8px;
-  padding: 13px 14px;
-  color: #636270;
-  font-size: 0.84rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  padding: 12px 14px;
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
 }
 
-.menu-placeholder-item .dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: #35353e;
-  flex-shrink: 0;
-}
-
-.menu-coming {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid #28282f;
-  font-size: 0.76rem;
-  color: #636270;
-  text-align: center;
-  font-style: italic;
+.menu-link:hover {
+  border-color: orange;
+  color: orange;
 }
 
 /* hero banner */

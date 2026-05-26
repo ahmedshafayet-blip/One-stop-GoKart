@@ -1,0 +1,164 @@
+/* reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  min-height: 100vh;
+}
+
+/* navbar */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 70px;
+  background: rgba(10,10,12,0.88);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #28282f;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  z-index: 100;
+}
+
+nav::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245,166,35,0.25), transparent);
+  pointer-events: none;
+}
+
+.nav-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-logo span { color: orange; }
+
+/* main centrerar login-boxen */
+main {
+  padding-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* login boxen */
+.login-box {
+  background: #141417;
+  border: 1px solid #35353e;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-box h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: white;
+}
+
+.login-sub {
+  color: #636270;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+/* input fält */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #b0acaa;
+  letter-spacing: 0.04em;
+}
+
+.field input {
+  background: #1c1c21;
+  border: 1px solid #35353e;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  padding: 11px 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input::placeholder { color: #636270; }
+
+.field input:focus {
+  border-color: orange;
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.12);
+}
+
+/* felmeddelande under mejl-fältet */
+.error-msg {
+  color: red;
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+/* input blir röd kant om fel */
+.field input.invalid {
+  border-color: red;
+}
+
+/* success meddelande */
+.success-msg {
+  color: #6bdf82;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* hidden klass */
+.hidden { display: none !important; }
+
+/* login knappen */
+.login-btn {
+  background: orange;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.login-btn:hover {
+  background: #ffc04a;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}   
