@@ -589,11 +589,11 @@ nav::after {
 
 /* Added flash */
 @keyframes flashGreen {
-  0%   { background: #2d7a3a; }
+  0%   { background: #bf760f; }
   100% { background: #242429; }
 }
 
 .add-to-cart.added {
   animation: flashGreen 0.7s ease forwards;
-  color: #6bdf82;
+  color: #e48c07;
 }

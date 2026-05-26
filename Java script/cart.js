@@ -144,7 +144,7 @@ function renderCart() {
   // show/hide the free shipping note
   const note = document.getElementById('freeShippingNote');
   if (shipping === 0) {
-    note.textContent = '🎉 You have free shipping!';
+    note.textContent = 'You have free shipping!';
     note.classList.remove('hidden');
   } else {
     const remaining = 1000 - subtotal;
