@@ -63,7 +63,7 @@ function calculateTotals(cart) {
     return sum + (item.price * item.qty);
   }, 0);
 
-  const shipping = subtotal >= 500 ? 0 : 99;
+  const shipping = subtotal >= 1000 ? 0 : 99;
   const total    = subtotal + shipping;
 
   return { subtotal, shipping, total };
@@ -151,10 +151,6 @@ function renderCart() {
     note.textContent = `Spend $${remaining} more for free shipping!`;
     note.classList.remove('hidden');
   }
-
-  // BORTTAGET: attachItemListeners() anropas INTE här längre
-  // Förut kördes den varje gång renderCart() kördes vilket
-  // skapade dubbla lyssnare → dubblerade klick
 }
 
 function updateSummary(subtotal, shipping, total) {
