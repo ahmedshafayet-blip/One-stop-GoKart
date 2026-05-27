@@ -86,8 +86,6 @@ nav::after {
 
 .search-wrap input:focus {
   border-color: #f5a623;
-  width: 275px;
-  box-shadow: 0 0 0 3px rgba(245,166,35,0.12);
 }
 
 .search-icon {
@@ -289,12 +287,6 @@ nav::after {
   letter-spacing: 0.02em;
   line-height: 0.95;
   margin-bottom: 18px;
-}
-
-.hero-banner h1 em {
-  color: #f5a623;
-  font-style: normal;
-  display: block;
 }
 
 .hero-banner p {
