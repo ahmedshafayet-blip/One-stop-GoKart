@@ -12,6 +12,12 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 /* navbar */
 nav {
   position: fixed;
@@ -26,13 +32,11 @@ nav {
   z-index: 100;
 }
 
-nav::after {
-  content: '';
-  position: absolute;
-  bottom: -1px; left: 10%; right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(245,166,35,0.25), transparent);
-  pointer-events: none;
+@media (max-width: 600px) {
+  nav {
+    height: 60px;
+    padding: 0 16px;
+  }
 }
 
 .nav-logo {
@@ -45,6 +49,12 @@ nav::after {
   text-decoration: none;
 }
 
+@media (max-width: 600px) {
+  .nav-logo {
+    font-size: 1.3rem;
+  }
+}
+
 .nav-logo span { color: orange; }
 
 /* main centrerar login-boxen */
@@ -54,6 +64,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding-top: 60px;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
 }
 
 /* login boxen */
@@ -69,6 +87,20 @@ main {
   gap: 20px;
 }
 
+@media (max-width: 600px) {
+  .login-box {
+    padding: 28px 20px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    gap: 16px;
+    /* Täcker hela skärmen horisontellt */
+    max-width: 100%;
+    min-height: calc(100vh - 60px);
+    justify-content: center;
+  }
+}
+
 .login-box h1 {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900;
@@ -78,10 +110,22 @@ main {
   color: white;
 }
 
+@media (max-width: 600px) {
+  .login-box h1 {
+    font-size: 1.7rem;
+  }
+}
+
 .login-sub {
   color: #636270;
   font-size: 0.9rem;
   margin-top: -10px;
+}
+
+@media (max-width: 600px) {
+  .login-sub {
+    font-size: 0.85rem;
+  }
 }
 
 /* input fält */
@@ -98,6 +142,12 @@ main {
   letter-spacing: 0.04em;
 }
 
+@media (max-width: 600px) {
+  .field label {
+    font-size: 0.78rem;
+  }
+}
+
 .field input {
   background: #1c1c21;
   border: 1px solid #35353e;
@@ -108,6 +158,14 @@ main {
   padding: 11px 14px;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Större touch-yta på mobil */
+@media (max-width: 600px) {
+  .field input {
+    font-size: 1rem;
+    padding: 13px 14px;
+  }
 }
 
 .field input::placeholder { color: #636270; }
@@ -122,6 +180,12 @@ main {
   color: red;
   font-size: 0.82rem;
   margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .error-msg {
+    font-size: 0.78rem;
+  }
 }
 
 /* input blir röd kant om fel */
@@ -155,10 +219,19 @@ main {
   transition: background 0.15s, transform 0.1s;
 }
 
+/* Lite större knapp på mobil för enklare tryckning */
+@media (max-width: 600px) {
+  .login-btn {
+    padding: 16px;
+    font-size: 1.05rem;
+    border-radius: 10px;
+  }
+}
+
 .login-btn:hover {
   background: #ffc04a;
 }
 
 .login-btn:active {
   transform: scale(0.98);
-}   
+}

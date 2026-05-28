@@ -51,9 +51,6 @@ function removeItem(id) {
 }
 
 function clearCart() {
-  const confirmed = confirm('Clear your entire cart?');
-  if (!confirmed) return;
-
   saveCart([]);
   renderCart();
 }
@@ -182,12 +179,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (action === 'remove') removeItem(id);
   });
 
-  // Clear cart knapp
+  // Clear cart knapp clearar allt på en gång istället för en pop up 
   document.getElementById('clearBtn').addEventListener('click', clearCart);
 
-  // Checkout knappen 
+  // checkout skickar till kontakt html
   document.getElementById('checkoutBtn').addEventListener('click', function() {
-    alert('Checkout coming soon!');
+    window.location.href = '../Html/kontakt.html';
   });
 
   renderCart();

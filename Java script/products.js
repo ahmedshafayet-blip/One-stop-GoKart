@@ -13,12 +13,12 @@ const products = [
   },
   {
     id: 2,
-    name: "IAME X30 Engine 125cc",
+    name: "IAME X30 Engine 125cc Full Kit",
     price: "$1,499",
     category: "Engine",
     image: "../Bilder/125cc_engine.jpg",
     alt: "IAME X30 Engine 125cc",
-    dataName: "iame x30 engine 125cc engine",
+    dataName: "iame x30 engine 125cc engine Full Kit",
     dataPrice: "1499",
     emoji: "⚙️"
   },
@@ -79,7 +79,7 @@ const products = [
   },
   {
     id: 7,
-    name: "Brake Caliper Kit",
+    name: "Brake Caliper Kit (wire, disc, caliper)",
     price: "$112",
     category: "Brakes",
     image: "../Bilder/brake_caliper_2.jpg",
@@ -123,16 +123,15 @@ const products = [
   },
   {
     id: 12,
-    name: "IAME X50 Engine 125cc",
+    name: "IAME X50 Engine 125cc Full Kit",
     price: "$2,149",
     category: "Engine",
     image: "../Bilder/250cc_engine.jpg",
     alt: "IAME X50 Engine 250cc",
-    dataName: "iame x50 engine 250cc engine",
+    dataName: "iame x50 engine 250cc engine Full Kit",
     dataPrice: "2149",
     emoji: "⚙️"
   },
-
   {
     id: 13,
     name:"Racing Gloves",
@@ -144,7 +143,6 @@ const products = [
     dataPrice: "39",
     emoji: "🏎️"
   },
-
   {
     id: 14,
     name:"Analog Speedometer Kit",
@@ -155,6 +153,17 @@ const products = [
     dataName: "Analog Speedometer Kit Electronics",
     dataPrice: "50",
     emoji: "⏱️"
+  },
+  {
+    id: 15,
+    name:"Motul 2T Motor Oil 1L",
+    price: "$29",
+    category: "Engine",
+    image: "../Bilder/Motul_oil.jpg",
+    alt: "Motul 2T Motor Oil 1L",
+    dataName: "Motul 2T Motor Oil 1L Engine",
+    dataPrice: "29",
+    emoji: "⚙️"
   }
 ];
 
