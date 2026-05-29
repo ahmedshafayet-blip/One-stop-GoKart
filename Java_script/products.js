@@ -123,7 +123,7 @@ const products = [
   },
   {
     id: 12,
-    name: "IAME X50 Engine 125cc Full Kit",
+    name: "IAME X50 Engine 250cc Full Kit",
     price: "$2,149",
     category: "Engine",
     image: "../Bilder/250cc_engine.jpg",
